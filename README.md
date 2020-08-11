@@ -9,6 +9,9 @@ gcc -Wall intal_sampletest.c PES1201801597.c -o mytest.out
 ./mytest.out
 ```
 
+# Note on Memory Leaks
+The program is void of any sort of memory leaks. It has been thoroughly tested and debugged for memory leaks using Valgrind tool suit.
+
 # Approach
 1. intal_add:
 Starting from the last digit of both the intals, the addition of digits is done and the mod is taken with 10 and stored in the result. The carry is propagated to the next digit as value of addition divided by 10.

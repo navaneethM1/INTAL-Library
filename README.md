@@ -1,12 +1,12 @@
 # Introduction
-Intal is an integer(zero or positive) of arbitrary number of digits. It is represented as a string of digits from '0' through '9' terminated with the null character. Intal is different from an integer(in general) because intal values are a representation of the value. It is not the value of the integer itself. It is different from integer data types supported by C in terms of the manner in which they are stored. C stores integers in 32bit word whereas intal is stored as a string of digits(in Big Endian manner) where each digit occupies 8bits. Also in the case of integer data types, bit wise logic is used directly by the ALU to perform operations like addition subtraction and others. But with intal being represented as string, the operations cannot be performed directly, instead they should be defined by us. Another difference is that the in-built integer data type cannot handle very large integers(ie integers greater than 2147483647) whereas the intal can handle integers having arbitrary number of digits(here restricted to 1000). 
+Intal is an integer(zero or positive) of arbitrary number of digits. It is represented as a string of digits from '0' through '9' terminated with the null character. Intal is different from an integer(in general) because intal values are a representation of the value. It is not the value of the integer itself. It is different from integer data types supported by C in terms of the manner in which they are stored. C stores integers in 32bit word whereas intal is stored as a string of digits(in Big Endian manner) where each digit occupies 8bits(because it is represented as a character in C). Also in the case of integer data types, bit wise logic is used directly by the ALU to perform operations like addition subtraction and others. But with intal being represented as string, the logic of the  operations cannot be performed directly, instead they should be defined by us. Another difference is that the in-built integer data type cannot handle very large integers(ie integers greater than 2147483647) whereas the intal can handle integers having arbitrary number of digits(here restricted to 1000). 
 
 The major application of intal is that it can be used to  represent very large numbers and carry out mathematical operations of addition, subtraction and others on very large numbers with very less chances of error which otherwise cannot be performed by the int data type provided by C.
 
 # Comile and run
 ```
-gcc intal_sampletest.c PES1201801597.c
-./a.out
+gcc -Wall intal_sampletest.c PES1201801597.c -o mytest.out
+./mytest.out
 ```
 
 # Approach
